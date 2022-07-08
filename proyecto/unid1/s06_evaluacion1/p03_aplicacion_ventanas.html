@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilosEval1.css">
+	<script src="js/arrayAlumnos.js"></script>
+	<script src="js/form03funcion.js"></script>
+</head>
+<body>
+	<h1>Aplicación 3 - Ventanas y tablas</h1>
+	<div id="content">
+		
+	<script>
+		var valor = prompt("¿Cuántos estudiantes de ambos TURNOS desea ver?", "1");
+		if(valor > 0 && valor <= alumnos.length)
+		{
+			for (var i = 0; i < valor; i++){
+				document.write("Tabla" + i);
+				document.write("<table border='1'>");
+			document.write("<tr><th colspan='2' class='titulo'>Datos personales del Alumno "+[i]+"/18</th></tr>");
+			document.write("<tr><td id='tdIzq'>Nombres y apellidos:</td><td id='tdDer'>"+alumnos[i][1]+"</td></tr>");
+			document.write("<tr><td id='tdIzq'>Turno:</td><td id='tdDer'>"+alumnos[i][3]+"</td></tr>");
+			document.write("<tr><td id='tdIzq'>Género:</td><td id='tdDer'>"+alumnos[i][4]+"</td></tr>");
+			document.write("</table>");
+					
+				
+			}
+		}else{
+			
+			document.writeln("Error... Inténtelo nuevamente...");
+		}
+	</script>
+
+	</div>	
+</body>
+</html>

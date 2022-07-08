@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="cssssss/estilosTema5.css">
+	<script src="js/arrayAlumnos.js"></script>
+	<script src="js/form03funcion.js"></script>
+</head>
+<body>
+	<h1>Aplicación 3 - Ventanas</h1>
+	<div id="content">
+	<script>
+		var valor = prompt("¿Cúantos estudiantes de ambos TURNOS desea ver?","1");
+		if (valor > 0 && valor <= alumnos.length)
+		{
+			for (var i = 0; i < valor; i++){
+				num = alumnos[i][0];
+				nom = alumnos[i][1];
+				ape = alumnos[i][2];
+				tur = fnTurno(alumnos[i][3]);
+				res = " ("+(i+1) + "/" + alumnos.length+")";
+
+				//fnGenerarTabla(res,num,nom,ape,tur);
+				document.write(`
+				
+				<table border="1" WIDTH="500" bordercolor="gold" bgcolor="gold">
+					<tr>
+						<th colspan='3' height:100px style="background: rgb(0, 95, 16)"><FONT COLOR="white">DATOS PERSONALES ( ${num} / ${alumnos.length})</th>
+					</tr>
+					<tr>
+						<td rowspan='3' WIDTH="150"><img src="img/f${num}.jpg" width="130" height="200"/></td>
+						<td style="background:darkorange">Nombres:</td>
+						<td style="background:rgb(250, 194, 91)">${nom}</td>
+					</tr>
+					<tr>
+						<td style="background:darkorange">Apellidos:</td>
+						<td style="background:rgb(250, 194, 91)">${ape}</td>
+					</tr>
+					<tr>
+						<td style="background:darkorange">Turno</td>
+						<td style="background:rgb(250, 194, 91)">${tur}</td>
+					</tr>
+					<tr>
+						<td style="background:chartreuse">1</td>
+						<td style="background:chartreuse">2</td>
+						<td style="background:chartreuse">3</td>
+					</tr>				
+				</table>						
+								`)	
+			}
+		}else{
+			alert("Solo se tiene registrado "+alumnos.length+" alumnos");
+			document.writeln("<h2>Inténtalo nuevamente....</h2>");
+		}
+	</script>
+	</div>
+</body>
+</html>

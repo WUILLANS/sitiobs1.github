@@ -1,0 +1,23 @@
+.contenedor1{
+    background-color:aqua;
+    display: flex;
+    /*flex-direction: colum; */ /*row; row-reverse; colimn-reverse*/
+    /*flex-wrap: wrap-reverse; *//*wrap;nowrap; wrap-reverse*/
+    flex-flow: wrap;
+}
+
+.contenedor1 div{background-color: gold; margin: 10px 5px; padding: 5px;width: 50px ;}
+
+.contenedor2{ 
+    background-color: tomato;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.contenedor2 div{background-color: gold;margin: 10px 5px; padding: 5px; width:50px;}
+
+.contenedor3{ 
+    background-color: yellow;
+    display: flex;
+    flex-flow: row wrarp-reverse;
+contenedor3 div{background-color: gold;margin: 10px 5px; padding: 5px; width:50px;}
